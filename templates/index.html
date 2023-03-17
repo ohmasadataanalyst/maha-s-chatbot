@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>موجه بالمستخدم</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>موجه بالمستخدم</h2>
+      </div>
+      <div class="chat-history" id="chat-history">
+        <div class="bot-message">
+          <p>مرحبا ما هو اسمك?</p>
+        </div>
+      </div>
+      <div class="chat-message">
+        <form id="chat-form" method="post" action="/get-response">
+          <input type="text" id="user-message" name="message" placeholder="Type your message...">
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
